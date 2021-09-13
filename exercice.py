@@ -2,24 +2,37 @@
 # -*- coding: utf-8 -*-
 
 
-def is_even_len(string: str) -> bool:
-    return False
+def is_even_len(x) -> bool:
+    if len(x)%2==0:
+        return("La chaine de caractères est paire")
+    else:
+        return("La chaine de caractère est impaire")
 
 
-def remove_third_char(string: str) -> str:
-    return ""
+def remove_third_char(no3) -> str:
+    return(no3[:2]+no3[3:])
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    return ""
+    return string.replace(old_char, new_char)
+
 
 
 def get_nb_char(string: str, char: str) -> int:
-    return 0
+    nb=-1
+    for letter in string:
+        if letter==char:
+            nb+=1
+    return(nb)
+
 
 
 def get_nb_words(sentence: str) -> int:
-    return 0
+    nb_mots=1
+    for char in sentence:
+        if char==" ":
+            nb_mots+=1
+    return(nb_mots)
 
 
 def main() -> None:
